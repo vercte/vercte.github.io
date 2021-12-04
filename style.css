@@ -1,0 +1,72 @@
+body {
+	font-family: 'Helvetica', sans-serif;
+	background-color: var(--background);
+	margin-top: 15px;
+	margin-left: 18vw;
+	margin-right: 18vw;
+	font-size: 15px;
+	line-height: 21px;
+	color: var(--text-color);
+}
+
+button {
+	font-family: 'Helvetica', sans-serif;
+	border: 2px rgba(0,0,0,0) solid;
+	border-radius: 7px;
+	background-color: var(--brand);
+	padding: 4px 10px;
+	color: var(--alt-text-color);
+	transition-duration: 0.2s;
+	font-size: 15px;
+}
+
+button:hover {
+	border: 2px var(--brand) solid;
+	background-color: var(--background);
+	padding: 4px 10px;
+	color: var(--text-color);
+	transition-duration: 0.2s;
+}
+
+button:active {
+	border: 2px var(--brand) solid;
+	background-color: var(--brand);
+	padding: 4px 10px;
+	color: var(--alt-text-color);
+	transition-duration: 0.2s;
+}
+
+#dark-button {
+	position: fixed;
+	border: 2px var(--background) solid !important;
+	padding: 0px 0px;
+	left: 2vw;
+	bottom: 2vw;
+	width: 40px;
+	height: 40px;
+	aspect-ratio: 1 / 1;
+}
+
+#top {
+	font-size: 40px;
+	text-align: center;
+}
+
+.blue-left {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 14vw;
+	border-right: var(--inner-border);
+	background-color: var(--side-color);
+}
+.blue-right {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 14vw;
+	border-left: var(--inner-border);
+	background-color: var(--side-color);
+}
