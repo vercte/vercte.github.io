@@ -24,10 +24,12 @@ function toggleDarkMode() {
 		isDarkMode = 0;
 		let styleObj = document.querySelector("html");
 		styleObj.style = themes.light;
+		stg.setItem("dm", 0);
 	} else {
 		isDarkMode = 1;
 		let styleObj = document.querySelector("html");
 		styleObj.style = themes.dark;
+		stg.setItem("dm", 1);
 	}
 };
 
