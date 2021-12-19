@@ -54,6 +54,12 @@ button:active {
 	transition-duration: 0.2s;
 }
 
+a {
+	text-decoration: none;
+	border-bottom: solid 5px var(--brand);
+	color: var(--text-color);
+}
+
 #dark-button {
 	position: fixed;
 	border: 2px var(--background) solid !important;
