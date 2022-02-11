@@ -1,26 +1,34 @@
 <!DOCTYPE html>
-<html style="--brand: #008cff; --text-color: black; --alt-text-color: white; --inner-border: none; --background: white; --side-color: #008cff;">
+<html>
 	<head>
-		<link href="style.css" rel="stylesheet">
-		<link href="favicon.png" rel="icon">
+		<link rel="stylesheet" href="style.css">
 		<script src="script.js" defer></script>
-		<meta name="google-site-verification" content="aUfvOoGZpYIFHdWcElCtha9usokiTIyKdJc0A3IyEjU">
-		<title>Vercte's Website</title>
+		<link rel="icon" href="favicon.png">
 	</head>
-	<body>
-		<div class="blue-left"></div><div class="blue-right"></div>
-		<h1 id="top">Vercte's Website</h1>
-		<h2>Hello! I'm Vercte.</h2> <br><br>
-		I'm a programmer and game developer who just loves JavaScript, Python and CSS.<br> I'm working on several projects recently, you can see that on my <a href="/projects">Projects List</a>!
-		Here's a fun list of the programming/markup languages I know:
-		<ul>
-			<li><i>HTML</i></li>
-			<li style="animation: wow 1s 0.1s ease-in-out alternate infinite;">CSS</li>
-			<li style="cursor: pointer;" onclick="wow();">JavaScript</li>
-			<li>Python</li>
-			<li>Lua</li>
-			<li>LOGO</li>
-		</ul>
-		<button onclick="toggleDarkMode();" id="dark-button"></button>
+	<body class="light">
+		<div id="nav-bar">
+			<div id="dark-light"></div>
+		</div>
+		<h1 style="margin-bottom: 0.1em;">Wello!</h1>
+		<h2 style="margin-top: 0.1em;">I'm <span style="color: var(--brand);">Vercte</span>.</h2>
+		
+		I'm a frontend web developer, who also makes games using JS and Lua.<br><br><br>
+		
+		<h2>Projects</h2>
+		I have a lot of projects, I'm not gonna lie. Some of them I'm not working on at all.<br>
+		<a href="projects">Here's my full list</a>, and here's my main projects:
+		<div id="projects">
+			<div class="main-project" onclick="location.href = 'https://github.com/lopste/drawing-station'">
+				<h2 class="project-title">Drawing Station</h2>
+			</div>
+			<div class="side-projectx" onclick="location.href = 'https://github.com/lopste/forumoji'">
+				<h2 class="project-title">Forumoji</h2>
+			</div>
+			<div class="side-projecty" onclick="location.href = 'https://github.com/lopste/jeygame'">
+				<h2 class="project-title">Jeygame</h2>
+			</div>
+		</div>
+		
+		<div id="madeby">made by a standalone text editor™</div>
 	</body>
 </html>
