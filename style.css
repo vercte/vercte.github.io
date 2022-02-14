@@ -70,12 +70,9 @@ div#projects {
 	display: grid;
 	grid-template-columns: 60% 40%;
 	grid-template-rows: 50% 50%;
-
-	overflow: hidden;
-	border-radius: 0.5em;
 	
 	/* set the current projects*/
-	--main-project: #008cff;
+	--main-project: #333 ;
 	--side-projectx: #f90;
 	--side-projecty: #0fe;
 }
@@ -85,12 +82,13 @@ body.dark div#projects {
 }
 
 div#projects > div {
-	box-shadow: inset 0 0 1em rgba(0,0,0,0.5);
 	transition-duration: 200ms;
 	
 	z-index: auto;
 	
 	cursor: pointer;
+	
+	overflow: hidden;
 }
 
 div#projects > div:hover {
@@ -100,11 +98,23 @@ div#projects > div:hover {
 	z-index: 20;
 }
 
+div#projects > div img{
+	filter: blur(0);
+	transition-duration: 200ms;
+}
+
+div#projects > div:hover img{
+	filter: blur(3pt);
+}
+
+
 div.main-project {
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 3;
+	border-top-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
 	
 	background: var(--main-project);
 }
@@ -114,6 +124,7 @@ div.side-projectx {
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 2;
+	border-top-right-radius: 0.5em;
 	
 	background: var(--side-projectx);
 }
@@ -123,6 +134,7 @@ div.side-projecty {
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 3;
+	border-bottom-right-radius: 0.5em;
 	
 	background: var(--side-projecty);
 }
@@ -132,14 +144,19 @@ div.side-projecty {
 	color: white;
 	filter: drop-shadow(black 0 0 5pt);
 	left: 1em;
+	
+	z-index: 2;
 }
+
+.project-image {
+	z-index: 1;
+	
+	margin-top: -4em;
+}
+
 
 div#madeby {
 	font-size: 0.8em;
-	position: fixed;
-	right: 2pt;
-	bottom: 2pt;
-	
 	z-index: 50;
 }
 
