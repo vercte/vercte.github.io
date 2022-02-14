@@ -66,7 +66,6 @@ div#projects {
 	margin-top: 1em;
 	height: 35em;
 	width: 100%;
-	background-color: white;
 	display: grid;
 	grid-template-columns: 60% 40%;
 	grid-template-rows: 50% 50%;
@@ -75,10 +74,6 @@ div#projects {
 	--main-project: #333 ;
 	--side-projectx: #f90;
 	--side-projecty: #0fe;
-}
-
-body.dark div#projects {
-	filter: brightness(80%);
 }
 
 div#projects > div {
