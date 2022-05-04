@@ -1,31 +1,42 @@
-const ls = window.localStorage
-
 function $(qry) {return document.querySelector(qry)}
-const body = $("body");
 
-function toggleDarkMode(e) {
-	e.preventDefault();
-	if(darkModeState == "dark") {
-		$("body").className = "light";
-		darkModeState = "light";
-	} else {
-		$("body").className = "dark";
-		darkModeState = "dark";
-	}
-	ls.setItem("home.darkMode", body.className);
-}
+const ss = window.sessionStorage;
+// Contrary to popular belief, this is NOT social studies!
 
-var darkModeState = "light";
-if(ls.getItem("home.darkMode")) {
-	darkModeState = ls.getItem("home.darkMode");
+if(window.location.pathname == "/") {
+    $("#topbar-title").href = "#"
 } else {
-	ls.setItem("home.darkMode", body.className);
+    $("#topbar-title").href = window.location.host
 }
+var theme = "light"
 
-if(darkModeState == "dark") {
-	$("body").className = "dark";
+if((ss.getItem("vw.introFinished") || window.location.hash) && window.location.pathname == "/") {
+    $("#heading-picture").className = "finished";
+    $("#topbar").className = "finished";
+    $("body").className = `${theme} finished`
 } else {
-	$("body").className = "light";
+    ss.setItem("vw.introFinished", true)
 }
 
-$("div#dark-light").addEventListener("pointerdown", toggleDarkMode);
+function setUpList() {
+    let projectDisplay = $("#beautiful-display");
+    if(projectDisplay) {
+        let projects = projectDisplay.querySelectorAll("div");
+        for(let i = 0; i < projects.length; i++) {
+            projects[i].addEventListener("click", () => {
+                location.href = projects[i].getAttribute("link");
+            })
+        }
+    }
+
+    let projectsList = $("#projects-list");
+    if(projectsList) {
+        let projects = projectsList.querySelectorAll("ul li[link]");
+        for(let i = 0; i < projects.length; i++) {
+            projects[i].addEventListener("click", () => {
+                location.href = projects[i].getAttribute("link");
+            })
+        }
+    }
+}
+setUpList();
