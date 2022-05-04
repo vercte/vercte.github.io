@@ -1,36 +1,56 @@
-<!DOCTYPE html>
+re<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="style.css">
-		<script src="script.js" defer></script>
-		<link rel="icon" href="favicon.png">
-		<title>Vercte's Website</title>
-	</head>
-	<body class="light">
-		<div id="nav-bar">
-			<div id="dark-light"></div>
-		</div>
-		<h1 style="margin-bottom: 0.1em;">Wello!</h1>
-		<h2 style="margin-top: 0.1em;">I'm <span style="color: var(--brand);">Vercte</span>.</h2>
-		
-		I'm a frontend web developer, who also makes games using JS and Lua.<br><br><br>
-		
-		<h2>Projects</h2>
-		I have a lot of projects, I'm not gonna lie. Some of them I'm not working on at all.<br>
-		<a href="projects">Here's my full list</a>, and here's my main projects:
-		<div id="projects">
-			<div class="main-project" onclick="location.href = 'https://github.com/lopste/drawing-station'">
-				<h2 class="project-title">Drawing Station</h2>
-				<img class="project-image" src="dsicon.png">
-			</div>
-			<div class="side-projectx" onclick="location.href = 'https://github.com/lopste/forumoji'">
-				<h2 class="project-title">Forumoji</h2>
-			</div>
-			<div class="side-projecty" onclick="location.href = 'https://github.com/lopste/jeygame'">
-				<h2 class="project-title">Jeygame</h2>
-			</div>
-		</div>
-		
-		<div id="madeby">made by a standalone text editor™</div>
-	</body>
-</html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script src="script.js" defer></script>
+        <title>Vercte's Website</title>
+    </head>
+    <body class="light">
+        <div id="heading-picture">
+            <h1>Vercte</h1>
+        </div>  
+        <div id="topbar">
+            <a href="" class="topbar-link" id="topbar-title">Vercte</a>
+            <a href="#projects" class="topbar-link">Projects</a>
+        </div>
+        <div id="main-content">
+            <h1 class="page-header">Hello!</h1>
+            <h2 class="page-sub">I'm Vercte.</h2>
+
+            I am a web developer and a 3d modeler who loves to make stuff.
+            I work on some projects for fun with other people, and I'm not really doing any paid projects right now
+            (just open source and fun projects, you know, for fun)
+            <br><br>
+            Want to see the projects that I'm working on? <a href="#projects">There's a section for that</a>.
+
+            <h2>More About Me</h2>
+            This is my website, so why not tell you more about me? That must be why you're here... right?
+            As I just said, I'm a web developer. I mostly do frontend, making on-the-computer web apps and such,
+            but I'm also trying out backend. If I can successfully make a web server, I might actually host my website on someplace other than Github Pages!
+            <br><br>
+            I also make games for fun, using <a href="https://godotengine.org">Godot</a> and <a href="https://roblox.com/create">Roblox Studio</a>. 
+            I haven't created anything notable for now, but I'll update here (or the projects section) when I do.
+
+            <h2 id="projects">Projects</h2>
+            These aren't all my projects, <a href="projects">these are</a>. The projects here just my main goals right now. <br> Queue the beautiful display!
+            <div id="beautiful-display">
+                <div class="main-project" link="https://lopste.github.io/forumoji">
+                    <h2>Project Forumoji</h2>
+                    <img src="img/forumoji.png">
+                </div>
+                <div class="side-project-1" link="https://github.com/jeygame/jeygame">
+                    <img src="img/jeygame.svg">
+                </div>
+                <div class="side-project-2" link="https://lopste.github.io/drawing-station">
+                    <h2>Drawing Station</h2>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div id="footer">
+                Made by <a href="https://github.com/lopste">lopste</a> (AKA Vercte, AKA <a href="https://scratch.mit.edu/users/lolecksdeehaha">lolecksdeehaha</a>). 
+                <a href="https://github.com/lopste/lopste.github.io">GitHub Repo</a>
+            </div>
+        </div>
+    </body>
+</html> 
