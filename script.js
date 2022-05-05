@@ -23,11 +23,21 @@ function setUpList() {
     if(projectDisplay) {
         let projects = projectDisplay.querySelectorAll("div");
         for(let i = 0; i < projects.length; i++) {
-            projects[i].addEventListener("click", () => {
-                location.href = projects[i].getAttribute("link");
+            projects[i].addEventListener("click", ({ctrlKey, shiftKey}) => {
+                if(ctrlKey || shiftKey) {
+                    open(projects[i].getAttribute("link"), "_blank");
+                } else {
+                    location.href = projects[i].getAttribute("link");
+                }
             })
-            projects[i].addEventListener("keydown", ({key}) => {
-                if(key == "Enter") location.href = projects[i].getAttribute("link");
+            projects[i].addEventListener("keydown", ({key, ctrlKey, shiftKey}) => {
+                if(key == "Enter") {
+                    if(ctrlKey || shiftKey) {
+                        open(projects[i].getAttribute("link"), "_blank");
+                    } else {
+                        location.href = projects[i].getAttribute("link");
+                    }
+                }
             })
         }
     }
@@ -36,11 +46,21 @@ function setUpList() {
     if(projectsList) {
         let projects = projectsList.querySelectorAll("ul li[link]");
         for(let i = 0; i < projects.length; i++) {
-            projects[i].addEventListener("click", () => {
-                location.href = projects[i].getAttribute("link");
+            projects[i].addEventListener("click", ({ctrlKey, shiftKey}) => {
+                if(ctrlKey || shiftKey) {
+                    open(projects[i].getAttribute("link"), "_blank");
+                } else {
+                    location.href = projects[i].getAttribute("link");
+                }
             })
-            projects[i].addEventListener("keydown", ({key}) => {
-                if(key == "Enter") location.href = projects[i].getAttribute("link");
+            projects[i].addEventListener("keydown", ({key, ctrlKey, shiftKey}) => {
+                if(key == "Enter") {
+                    if(ctrlKey || shiftKey) {
+                        open(projects[i].getAttribute("link"), "_blank");
+                    } else {
+                        location.href = projects[i].getAttribute("link");
+                    }
+                }
             })
         }
     }
