@@ -26,6 +26,9 @@ function setUpList() {
             projects[i].addEventListener("click", () => {
                 location.href = projects[i].getAttribute("link");
             })
+            projects[i].addEventListener("keydown", ({key}) => {
+                if(key == "Enter") location.href = projects[i].getAttribute("link");
+            })
         }
     }
 
@@ -35,6 +38,9 @@ function setUpList() {
         for(let i = 0; i < projects.length; i++) {
             projects[i].addEventListener("click", () => {
                 location.href = projects[i].getAttribute("link");
+            })
+            projects[i].addEventListener("keydown", ({key}) => {
+                if(key == "Enter") location.href = projects[i].getAttribute("link");
             })
         }
     }

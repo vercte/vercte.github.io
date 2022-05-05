@@ -244,7 +244,7 @@ a {
     border-top-left-radius: 7pt;
 
     z-index: 3;
-    background-color: orange;
+    background-color: white;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -329,10 +329,12 @@ li[link]::after {
     margin-left: 0.5em;
 }
 
-li[link]:hover::after {
+li[link]:hover::after, li[link]:focus::after {
     opacity: 1;
 }
 
-li[link]:hover {
+li[link]:hover, li[link]:focus {
     color: var(--accent);
+    outline: none;
+    text-decoration: underline 2px;
 }
